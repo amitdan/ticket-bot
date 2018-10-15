@@ -1,5 +1,3 @@
-# School Information System - basic
-
 The app is divided into two parts
 *   API 
 *   Web
