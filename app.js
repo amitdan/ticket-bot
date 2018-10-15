@@ -29,7 +29,6 @@ app.set('view options', { layout: 'layout' });
 
 mongoose.Promise = global.Promise;
 // Connect to Mongoose and set connection variable
-//mongoose.connect('mongodb://heroku_dbadmin:nwl6b0kq@ds227525.mlab.com:27525/heroku_nwl6b0kq', { useMongoClient: true });
 mongoose.connect('mongodb://admin:admin@cluster0-shard-00-00-ltfu2.mongodb.net:27017,cluster0-shard-00-01-ltfu2.mongodb.net:27017,cluster0-shard-00-02-ltfu2.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true', { useMongoClient: true });
 
 
