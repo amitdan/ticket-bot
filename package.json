@@ -1,0 +1,28 @@
+{
+    "name": "sis-basic",
+    "version": "1.0.0",
+    "description": "School Information System - Basic",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "body-parser": "*",
+        "express": "*",
+        "express-handlebars": "^3.0.0",
+        "mongoose": "*",
+        "querystring": "^0.2.0",
+        "request": "^2.83.0",
+        "url": "^0.11.0"
+    },
+    "keywords": [
+        "sis",
+        "inyangetoh",
+        "alc",
+        "students-api",
+        "test"
+    ],
+    "author": "David Inyang-Etoh",
+    "license": "ISC"
+}

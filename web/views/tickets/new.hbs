@@ -1,0 +1,174 @@
+<section class="columns is-info" style="padding: 20px 0;">
+    <div class="column">
+        <div class="is-pulled-right">
+            <a class="button is-link" href="/">
+                <i class="fa fa-list">
+                </i>
+                List Ticket
+            </a>
+        </div>
+    </div>
+</section>
+<div class="is-clearfix">
+</div>
+<section id="form">
+    <div class="columns">
+        <div class="column is-half is-offset-one-quarter" id="student-form">
+            <p class="title has-text-centered">
+                Add Tickets
+            </p>
+            <hr/>
+            <p class="has-text-centered">
+                Kindly provide information for the input boxes below
+            </p>
+            <br/>
+            <br/>
+            <form action="/ticket/add" method="post">
+                <div class="columns">
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">
+                                First Name
+                            </label>
+                            <div class="control">
+                                <input class="input" name="first_name" placeholder="First Name" required="" type="text">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">
+                                Last Name
+                            </label>
+                            <div class="control">
+                                <input class="input" name="last_name" placeholder="Last Name" required="" type="text">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">
+                                Email
+                            </label>
+                            <div class="control">
+                                <input class="input" name="email" placeholder="Email" type="text">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">
+                                Phone
+                            </label>
+                            <div class="control">
+                                <input class="input" name="phone" placeholder="Phone" type="text">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">
+                                Date of Birth
+                            </label>
+                            <div class="control">
+                                <input class="input" name="dob" placeholder="DD/MM/YYYY" type="date">
+                                </input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">
+                                Gender
+                            </label>
+                            <div class="control">
+                                <div class="select">
+                                    <select name="gender">
+                                        <option value="Male">
+                                            Male
+                                        </option>
+                                        <option value="Female">
+                                            Female
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">
+                                Marital Status
+                            </label>
+                            <div class="control">
+                                <div class="select">
+                                    <select name="marital_status">
+                                        <option value="Single">
+                                            Single
+                                        </option>
+                                        <option value="Married">
+                                            Married
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">
+                                State
+                            </label>
+                            <div class="control">
+                                <div class="select">
+                                    <select name="state">
+                                        {{#each states}}
+                                        <option value="{{this}}">
+                                            {{this}}
+                                        </option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">
+                                Institution
+                            </label>
+                            <div class="control">
+                                <div class="select">
+                                    <select name="institution">
+                                        {{#each institutions}}
+                                        <option value="{{this}}">
+                                            {{this}}
+                                        </option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">
+                                Department
+                            </label>
+                            <div class="control">
+                                <div class="select">
+                                    <select name="department">
+                                        {{#each departments}}
+                                        <option value="{{this}}">
+                                            {{this}}
+                                        </option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="has-text-right">
+                            <button class="button is-info is-large" type="submit">
+                                <i class="fa fa-save">
+                                </i>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

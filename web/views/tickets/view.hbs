@@ -1,0 +1,127 @@
+<section class="columns is-info" style="padding-top: 20px;">
+    <div class="column">
+        <h1 class="title">
+            View Details: {{ticket.first_name}} {{ticket.last_name}}
+            <a class="button is-warning" href="/ticket/edit/{{ticket._id}}">
+                <i class="fa fa-pencil-square-o">
+                </i>
+                Edit
+            </a>
+            <div class="is-pulled-right">
+                <a class="button is-link" href="/">
+                    <i class="fa fa-list">
+                    </i>
+                    List Ticket
+                </a>
+                <a class="button is-primary" href="/ticket/add">
+                    <i class="fa fa-user-plus">
+                    </i>
+                    Add Ticket
+                </a>
+            </div>
+        </h1>
+    </div>
+</section>
+<div class="is-clearfix">
+</div>
+<section class="columns is-info">
+    <div class="column is-half">
+        <table class="table is-fullwidth is-striped">
+            <thead>
+                <th colspan="2">
+                    <p class="title has-text-centered">
+                    </p>
+                </th>
+            </thead>
+            <tr>
+                <th class="has-text-right" width="30%">
+                    First Name
+                </th>
+                <td>
+                    {{ticket.first_name}}
+                </td>
+            </tr>
+            <tr>
+                <th class="has-text-right" width="30%">
+                    Last Name
+                </th>
+                <td>
+                    {{ticket.last_name}}
+                </td>
+            </tr>
+            <tr>
+                <th class="has-text-right" width="30%">
+                    Gender
+                </th>
+                <td>
+                    {{ticket.gender}}
+                </td>
+            </tr>
+            <tr>
+                <th class="has-text-right" width="30%">
+                    Date of Birth
+                </th>
+                <td>
+                    {{ticket.dob}}
+                </td>
+            </tr>
+            <tr>
+                <th class="has-text-right">
+                    Email
+                </th>
+                <td>
+                    {{ticket.email}}
+                </td>
+            </tr>
+            <tr>
+                <th class="has-text-right">
+                    phone
+                </th>
+                <td>
+                    {{ticket.phone}}
+                </td>
+            </tr>
+            <tr>
+                <th class="has-text-right">
+                    State
+                </th>
+                <td>
+                    {{ticket.state}}
+                </td>
+            </tr>
+            <tr>
+                <th class="has-text-right">
+                    Marital Status
+                </th>
+                <td>
+                    {{ticket.marital_status}}
+                </td>
+            </tr>
+            <tr>
+                <th class="has-text-right">
+                    Institution
+                </th>
+                <td>
+                    {{ticket.institution}}
+                </td>
+            </tr>
+            <tr>
+                <th class="has-text-right">
+                    Department
+                </th>
+                <td>
+                    {{ticket.department}}
+                </td>
+            </tr>
+            <tr>
+                <td class="has-text-right" colspan="2">
+                    <a class="button is-danger" href="/ticket/delete/{{ticket._id}}">
+                        <i class="fa fa-trash">
+                        </i>
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

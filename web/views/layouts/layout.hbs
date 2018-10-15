@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <title>
+            {{pageTitle}}
+        </title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" rel="stylesheet"/>
+        <style>
+            i{
+            padding-right: 10px;
+        }
+        #student-form{
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f2f7ff;
+            margin-bottom: 20px;
+
+        }
+        </style>
+        <script src="http://code.jquery.com/jquery-2.2.4.min.js">
+        </script>
+    </head>
+</html>
+<body>
+    <section class="hero is-link">
+        <div class="hero-body container">
+            <a href="/">
+                <p class="title">
+                    Ticket Management System
+                </p>
+                <p class="subtitle">
+                    Manage Property Maintenance related Ticket Information
+                </p>
+            </a>
+        </div>
+    </section>
+    <div class="container is-fluid">
+        {{#if message}}
+        <br>
+            <div class="notification is-warning">
+                {{message}}
+            </div>
+            {{/if}}
+        {{{body}}}
+        </br>
+    </div>
+</body>

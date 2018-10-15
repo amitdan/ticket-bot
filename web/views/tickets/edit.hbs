@@ -1,0 +1,199 @@
+<section class="columns is-info" style="padding-top: 20px;">
+    <div class="column">
+        <h1 class="title">
+            Edit Details: {{ticket.first_name}} {{ticket.last_name}}
+            <div class="is-pulled-right">
+                <a class="button is-link" href="/">
+                    <i class="fa fa-list">
+                    </i>
+                    List Ticket
+                </a>
+                <a class="button is-primary" href="/ticket/add">
+                    <i class="fa fa-user-plus">
+                    </i>
+                    Add Ticket
+                </a>
+            </div>
+        </h1>
+    </div>
+</section>
+<div class="is-clearfix">
+</div>
+<form method="post">
+    <section class="columns is-info" style="padding: 10px;">
+        <div class="column is-half">
+            <table class="table is-fullwidth is-striped">
+                <thead>
+                    <th colspan="2">
+                        <p class="title has-text-centered">
+                        </p>
+                    </th>
+                </thead>
+                <tr>
+                    <th class="has-text-right" width="30%">
+                        First Name
+                    </th>
+                    <td>
+                        <input class="input" name="first_name" required="" type="text" value="{{ticket.first_name}}">
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right" width="30%">
+                        Last Name
+                    </th>
+                    <td>
+                        <input class="input" name="last_name" required="" type="text" value="{{ticket.last_name}}">
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right" width="30%">
+                        Gender
+                    </th>
+                    <td>
+                        <select class="control" name="gender">
+                            {{#if ticket.gender}}
+                            <option selected="" value="{{ticket.gender}}">
+                                {{ticket.gender}}
+                            </option>
+                            {{/if}}
+                            <option value="">
+                                Select Gender
+                            </option>
+                            <option value="Male">
+                                Male
+                            </option>
+                            <option value="Female">
+                                Female
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right" width="30%">
+                        Date of Birth
+                    </th>
+                    <td>
+                        <input class="input" name="dob" type="date" value="{{ticket.dob}}">
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        Email
+                    </th>
+                    <td>
+                        <input class="input" name="email" placeholder="Email" type="text" value="{{ticket.email}}">
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        phone
+                    </th>
+                    <td>
+                        <input class="input" name="phone" placeholder="Phone" type="text" value="{{ticket.phone}}">
+                        </input>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        State
+                    </th>
+                    <td>
+                        <select class="control" name="state">
+                            {{#if ticket.state}}
+                            <option selected="" value="{{ticket.state}}">
+                                {{ticket.state}}
+                            </option>
+                            {{/if}}
+                            <option value="">
+                                Select State
+                            </option>
+                            {{#each states}}
+                            <option value="{{this}}">
+                                {{this}}
+                            </option>
+                            {{/each}}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        Marital Status
+                    </th>
+                    <td>
+                        <select class="control" name="marital_status">
+                            {{#if ticket.marital_status}}
+                            <option selected="" value="{{ticket.marital_status}}">
+                                {{ticket.marital_status}}
+                            </option>
+                            {{/if}}
+                            <option value="">
+                                Select Status
+                            </option>
+                            <option value="Single">
+                                Single
+                            </option>
+                            <option value="Married">
+                                Married
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        Institution
+                    </th>
+                    <td>
+                        <select class="control" name="institution">
+                            {{#if ticket.institution}}
+                            <option selected="" value="{{ticket.institution}}">
+                                {{ticket.institution}}
+                            </option>
+                            {{/if}}
+                            <option value="">
+                                Select Institution
+                            </option>
+                            {{#each institutions}}
+                            <option value="{{this}}">
+                                {{this}}
+                            </option>
+                            {{/each}}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="has-text-right">
+                        Department
+                    </th>
+                    <td>
+                        <select class="control" name="department">
+                            {{#if ticket.department}}
+                            <option selected="" value="{{ticket.department}}">
+                                {{ticket.department}}
+                            </option>
+                            {{/if}}
+                            <option value="">
+                                Select Department
+                            </option>
+                            {{#each departments}}
+                            <option value="{{this}}">
+                                {{this}}
+                            </option>
+                            {{/each}}
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div class="has-text-centered">
+                <button class="button is-primary" type="submit">
+                    <i class="fa fa-save">
+                    </i>
+                    Save & Update
+                </button>
+            </div>
+        </div>
+    </section>
+</form>
